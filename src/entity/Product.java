@@ -4,8 +4,8 @@ import java.lang.String;
 
 public class Product {
     private int productId;
-private String productName;
-private double productPrice;
+    private String productName;
+    private double productPrice;
     private int amountOfAvailableProducts;
 
     public Product(int productId, java.lang.String productName, double productPrice, int amountOfAvailableProducts) {
