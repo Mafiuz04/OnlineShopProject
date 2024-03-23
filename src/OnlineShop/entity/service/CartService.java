@@ -1,7 +1,7 @@
-package service;
+package OnlineShop.entity.service;
 
-import entity.Cart;
-import entity.Order;
+import OnlineShop.entity.Cart;
+import OnlineShop.entity.Order;
 
 public class CartService {
 

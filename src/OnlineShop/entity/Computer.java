@@ -1,4 +1,4 @@
-package entity;
+package OnlineShop.entity;
 
 public class Computer extends Product {
     private String processor;

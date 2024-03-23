@@ -1,4 +1,4 @@
-package entity;
+package OnlineShop.entity;
 
 import java.util.Objects;
 
