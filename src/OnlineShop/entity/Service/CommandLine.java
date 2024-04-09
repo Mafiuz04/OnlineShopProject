@@ -50,6 +50,7 @@ public interface CommandLine {
             switch (option) {
                 case 1:
                     try {
+                        ProductManager.removeNotAvailableProduct();
                         ProductManager.showAllProducts();
                         System.out.println();
                     } catch (NoSuchElementException e) {
@@ -114,6 +115,7 @@ public interface CommandLine {
             switch (option) {
                 case 1:
                     try {
+                        ProductManager.removeNotAvailableProduct();
                         ProductManager.showAllProducts();
                         System.out.println();
                     } catch (NoSuchElementException e) {

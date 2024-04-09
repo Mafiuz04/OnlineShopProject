@@ -89,6 +89,13 @@ public interface ProductManager {
             throw new NoSuchElementException("There are no products");
         }
     }
+    static void removeNotAvailableProduct() throws  NoSuchElementException{
+        if (!products.isEmpty()) {
+            products.removeIf(product -> product.getAmountOfAvailableProducts() == 0);
+        } else {
+            throw new NoSuchElementException("There are no products");
+        }
+    }
 
     static void deleteProductByID(int id) {
         products.remove(id - 1);
