@@ -32,6 +32,7 @@ public interface CommandLine {
                     break;
                 default:
                     System.out.println("There is no more options, please choose option number 1 or 2.");
+                    option = 0;
             }
         }
     }
@@ -63,7 +64,7 @@ public interface CommandLine {
                     int add = sc.nextInt();
                     try {
                         CartService.addProductToCart(cart, ProductManager.products.get(add - 1));
-                    } catch (NoSuchElementException e) {
+                    } catch (NoSuchElementException | IndexOutOfBoundsException e) {
                         System.out.println(e.getMessage());
                     }
                     break;

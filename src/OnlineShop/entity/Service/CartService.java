@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 
 public interface CartService {
 
-    static void addProductToCart(Cart cart, Product product) throws NoSuchElementException {
+    static void addProductToCart(Cart cart, Product product) throws NoSuchElementException, IndexOutOfBoundsException {
         if (!ProductManager.products.isEmpty()) {
             cart.getCartProducts().add(product);
         } else {
@@ -16,7 +16,7 @@ public interface CartService {
         }
     }
 
-    static void showProductsInCart(Cart cart) {
+    static void showProductsInCart(Cart cart) throws  NoSuchElementException{
         if (!cart.getCartProducts().isEmpty()) {
             for (Product cartProduct : cart.getCartProducts()) {
                 System.out.println(cartProduct);
